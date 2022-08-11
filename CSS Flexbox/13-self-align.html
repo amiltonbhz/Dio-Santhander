@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos: Self-align</title>
+    <style>
+        .flex-container{
+            display: flex;
+            max-width: 350px;
+            border: 1px solid black;
+            margin-bottom: 10px;
+            /* align-items: center; */
+        }
+
+        .item{
+            background-color: brown;
+            color: white;
+            font-size: 24;
+            text-align: center;
+            margin: 5px;
+        }
+
+        .align-container{
+            align-items: center;
+        }
+
+        .column{
+            flex-direction: column;
+        }
+        
+        .center{
+            align-self: center;
+        }
+
+        .start{
+            align-self: flex-start;
+        }
+
+        .end{
+            align-self: flex-end;
+        }
+
+        .baseline{
+            align-self: baseline;
+        }
+
+        .strech{
+            align-self: stretch;
+        }
+
+        .auto{
+            align-self: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h1> Flex Directon row</h1>
+
+    <div class="flex-container align-container">
+        <div class="item auto">AAA</div>
+        <div class="item auto">123</div>
+        <div class="item auto">Lorem ipsum boris therefore is always free</div>
+        <div class="item auto">ITEM 4</div>
+    </div>
+    
+    <div class="flex-container">
+        <div class="item center">AAA</div>
+        <div class="item start">123</div>
+        <div class="item strech">Lorem ipsum boris therefore is always free</div>
+        <div class="item baseline">ITEM 4</div>
+    </div>
+
+    <h1> Flex Directon column</h1>
+
+    <div class="flex-container align-container column">
+        <div class="item auto">AAA</div>
+        <div class="item auto">123</div>
+        <div class="item auto">Lorem ipsum boris therefore is always free</div>
+        <div class="item auto">ITEM 4</div>
+    </div>
+    
+    <div class="flex-container column">
+        <div class="item center">AAA</div>
+        <div class="item start">123</div>
+        <div class="item strech">Lorem ipsum boris therefore is always free</div>
+        <div class="item baseline">ITEM 4</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos: Flex-shrink</title>
+    <Style>
+        .flex-container{
+            display: flex;
+            border: 1px solid black;
+            max-width: 350px;
+            margin-bottom: 10px;
+        }
+
+        .item{
+            margin: 5px;
+            background-color: orangered;
+            font-size:24px;
+            text-align: center;
+        }
+
+        .s0{
+            flex-shrink: 0;
+            flex-basis: 100px;
+        }
+        .s1{
+            flex-shrink: 1;
+        }
+
+        .s2{
+            flex-shrink: 2;
+            flex-basis: 100px;
+
+        }
+
+        .s3{
+            flex-shrink: 3;
+        }
+        
+        .fg1{
+            flex-grow: 1;
+        }
+    </Style>
+</head>
+<body>
+    <p>Flex shrink 1</p>
+    <div class="flex-container">
+        <div class="item s1 fg1">A</div>
+        <div class="item s1 fg1">B</div>
+        <div class="item s1 fg1">C</div>
+        <div class="item s1 fg1">D</div>
+        <div class="item s1 fg1">E</div>
+        <div class="item s1 fg1">E</div>
+    </div>
+
+    <p>Flex shrink 1</p>
+    <div class="flex-container">
+        <div class="item s1 fg1">A</div>
+        <div class="item s1 fg1">Betum solum </div>
+        <div class="item s1 fg1">C</div>
+        <div class="item s1 fg1">D</div>
+        <div class="item s1 fg1">E</div>
+    </div>
+
+    <p>Flex shrink 0 and Basis 100px</p>
+    <div class="flex-container">
+        <div class="item s0 fg1">A</div>
+        <div class="item s0 fg1">Betum  </div>
+        <div class="item s0 fg1">Coral code</div>
+        <div class="item s0 fg1">D</div>
+        <div class="item s0 fg1">E</div>
+    </div>
+    
+    <p>Flex shrink Mix</p>
+    <div class="flex-container">
+        <div class="item s1 fg1">A</div>
+        <div class="item s2 fg1">Betum solum </div>
+        <div class="item s2 fg1">C</div>
+        <div class="item s2 fg1">D</div>
+    </div>
+
+</body>
+</html>
